@@ -1,13 +1,13 @@
 export const COLORS = {
-  primary: '#1E40AF',      // Modern blue - eye-catching but not heavy
-  secondary: '#3B82F6',     // Lighter blue for secondary elements
-  accent: '#60A5FA',        // Soft blue accent
-  neutral1: '#E5E7EB',      // Light gray
-  neutral2: '#F3F4F6',      // Very light gray
+  primary: '#2A0800',
+  secondary: '#775144',
+  accent: '#FADBD8',
+  neutral1: '#C09891',
+  neutral2: '#BEA8A7',
   white: '#FFFFFF',
-  black: '#111827',         // Softer black
-  gray: '#F9FAFB',          // Very light gray background
-  darkGray: '#6B7280'       // Medium gray for text
+  black: '#000000',
+  gray: '#F5F5F5',
+  darkGray: '#333333'
 }
 
 export const BREAKPOINTS = {
