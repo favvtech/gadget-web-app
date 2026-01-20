@@ -1,0 +1,115 @@
+.promotional-banners {
+  padding: 2rem 0;
+  background-color: var(--color-gray);
+}
+
+.banners-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.promo-banner {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.promo-banner:hover {
+  transform: translateY(-5px);
+}
+
+.promo-banner-1 {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.promo-banner-2 {
+  background: linear-gradient(135deg, #2A0800 0%, #775144 100%);
+}
+
+.promo-content {
+  z-index: 2;
+  color: var(--color-white);
+  flex: 1;
+}
+
+.promo-label {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.promo-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.promo-button {
+  display: inline-block;
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.promo-button:hover {
+  background-color: var(--color-accent);
+  transform: translateX(5px);
+}
+
+.promo-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.promo-image {
+  max-width: 100%;
+  height: auto;
+  max-height: 250px;
+  object-fit: contain;
+  filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.3));
+}
+
+@media (max-width: 767px) {
+  .banners-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .promo-banner {
+    flex-direction: column;
+    text-align: center;
+    min-height: 250px;
+    padding: 1.5rem;
+  }
+  
+  .promo-title {
+    font-size: 1.5rem;
+  }
+  
+  .promo-image {
+    max-height: 150px;
+    margin-top: 1rem;
+  }
+}

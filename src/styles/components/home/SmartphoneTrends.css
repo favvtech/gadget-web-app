@@ -1,0 +1,86 @@
+.smartphone-trends {
+  padding: 3rem 0;
+  background-color: var(--color-white);
+}
+
+.trends-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.smartphones-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.smartphone-card {
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: var(--color-white);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.smartphone-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.smartphone-link {
+  display: block;
+}
+
+.smartphone-image-container {
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background-color: var(--color-gray);
+}
+
+.smartphone-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.smartphone-info {
+  padding: 1rem;
+  text-align: center;
+}
+
+.smartphone-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.smartphone-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--color-secondary);
+}
+
+@media (max-width: 767px) {
+  .smartphones-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .smartphone-image-container {
+    height: 200px;
+    padding: 1rem;
+  }
+  
+  .smartphone-name {
+    font-size: 0.9rem;
+  }
+  
+  .smartphone-price {
+    font-size: 1rem;
+  }
+}
