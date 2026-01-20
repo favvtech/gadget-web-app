@@ -5,15 +5,15 @@
 }
 
 :root {
-  --color-primary: #2A0800;
-  --color-secondary: #775144;
-  --color-accent: #FADBD8;
-  --color-neutral1: #C09891;
-  --color-neutral2: #BEA8A7;
+  --color-primary: #1E40AF;
+  --color-secondary: #3B82F6;
+  --color-accent: #60A5FA;
+  --color-neutral1: #E5E7EB;
+  --color-neutral2: #F3F4F6;
   --color-white: #FFFFFF;
-  --color-black: #000000;
-  --color-gray: #F5F5F5;
-  --color-dark-gray: #333333;
+  --color-black: #111827;
+  --color-gray: #F9FAFB;
+  --color-dark-gray: #6B7280;
   
   --breakpoint-mobile: 767px;
   --breakpoint-desktop: 768px;

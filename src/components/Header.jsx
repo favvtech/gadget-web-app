@@ -59,8 +59,18 @@ const Header = () => {
       }
     }
     
+    // Prevent body scroll when menu is open
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    
     document.addEventListener('mousedown', handleClickOutside)
-    return () => document.removeEventListener('mousedown', handleClickOutside)
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+      document.body.style.overflow = ''
+    }
   }, [closeProfileDropdown, closeMobileMenu, mobileMenuOpen])
   
   return (
@@ -102,6 +112,12 @@ const Header = () => {
           </form>
         </div>
         
+        {mobileMenuOpen && (
+          <div 
+            className="mobile-menu-overlay"
+            onClick={closeMobileMenu}
+          />
+        )}
         <nav className={`nav-links ${mobileMenuOpen ? 'mobile-open' : ''}`}>
           <Link to="/" className="nav-link" onClick={closeMobileMenu}>HOME</Link>
           <Link to="/category/all" className="nav-link" onClick={closeMobileMenu}>CATEGORIES</Link>
