@@ -22,7 +22,8 @@ const getBasePath = () => {
     const path = window.location.pathname.split('/?/')[1]
     window.history.replaceState({}, '', path.replace(/~and~/g, '&'))
   }
-  return '/'
+  // Default to repository name for production builds
+  return '/gadget-web-app/'
 }
 
 function App() {
