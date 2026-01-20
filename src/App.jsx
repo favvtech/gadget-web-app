@@ -10,20 +10,20 @@ import Layout from './components/Layout'
 
 // Get base path for GitHub Pages
 const getBasePath = () => {
-  // If running on GitHub Pages, extract repo name from pathname
-  if (window.location.hostname.includes('github.io')) {
-    const pathParts = window.location.pathname.split('/').filter(Boolean)
-    if (pathParts.length > 0 && pathParts[0] !== '') {
-      return `/${pathParts[0]}/`
-    }
-  }
-  // Handle GitHub Pages 404 redirect
+  // Handle GitHub Pages 404 redirect first
   if (window.location.pathname.includes('/?/')) {
     const path = window.location.pathname.split('/?/')[1]
-    window.history.replaceState({}, '', path.replace(/~and~/g, '&'))
+    window.history.replaceState({}, '', `/gadget-web-app/${path.replace(/~and~/g, '&')}`)
+    return '/gadget-web-app/'
   }
-  // Default to repository name for production builds
-  return '/gadget-web-app/'
+  
+  // If running on GitHub Pages, use repository name as base
+  if (window.location.hostname.includes('github.io')) {
+    return '/gadget-web-app/'
+  }
+  
+  // For local development
+  return '/'
 }
 
 function App() {

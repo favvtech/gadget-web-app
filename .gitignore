@@ -15,9 +15,6 @@ dist-ssr
 # GitHub Pages - keep docs folder
 !docs
 
-# Don't ignore root index.html (we'll delete it)
-# index.html
-
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

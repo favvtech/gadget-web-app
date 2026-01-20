@@ -16,8 +16,8 @@ try {
     // Add GitHub Pages SPA redirect script before the closing head tag
     const redirectScript = `
     <script>
-      // GitHub Pages SPA redirect
-      var pathSegmentsToKeep = 0;
+      // GitHub Pages SPA redirect - keep repository name segment
+      var pathSegmentsToKeep = 1;
       var l = window.location;
       l.replace(
         l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
