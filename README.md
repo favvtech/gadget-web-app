@@ -58,6 +58,37 @@ src/
     └── pages/
 ```
 
+## GitHub Pages Deployment
+
+This project is configured for GitHub Pages deployment. The build output goes to the `docs` folder.
+
+### Setup for GitHub Pages:
+
+1. **Build the project:**
+   ```bash
+   npm run build
+   ```
+
+2. **Commit and push the `docs` folder:**
+   ```bash
+   git add docs
+   git commit -m "Build for GitHub Pages"
+   git push
+   ```
+
+3. **Configure GitHub Pages:**
+   - Go to your repository Settings → Pages
+   - Under "Source", select "Deploy from a branch"
+   - Select branch: `main` or `master`
+   - Select folder: `/docs`
+   - Click Save
+
+4. **Automatic Deployment (Recommended):**
+   - The GitHub Actions workflow will automatically deploy on every push to main/master
+   - Make sure to add your environment variables as GitHub Secrets:
+     - Go to Settings → Secrets and variables → Actions
+     - Add all your `VITE_*` environment variables as secrets
+
 ## Setup Instructions
 
 ### Prerequisites
