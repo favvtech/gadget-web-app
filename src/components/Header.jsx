@@ -119,10 +119,34 @@ const Header = () => {
           />
         )}
         <nav className={`nav-links ${mobileMenuOpen ? 'mobile-open' : ''}`}>
+          {user ? (
+            <div className="mobile-menu-profile">
+              <div className="mobile-profile-icon">
+                <FaUser />
+              </div>
+              <div className="mobile-profile-email">{user.email}</div>
+            </div>
+          ) : (
+            <Link to="/login" className="mobile-menu-profile" onClick={closeMobileMenu}>
+              <div className="mobile-profile-icon">
+                <FaUser />
+              </div>
+              <div className="mobile-profile-text">Profile</div>
+            </Link>
+          )}
+          
           <Link to="/" className="nav-link" onClick={closeMobileMenu}>HOME</Link>
           <Link to="/category/all" className="nav-link" onClick={closeMobileMenu}>CATEGORIES</Link>
           <Link to="/cart" className="nav-link" onClick={closeMobileMenu}>CART</Link>
           <Link to="/wishlist" className="nav-link" onClick={closeMobileMenu}>WISHLIST</Link>
+          
+          {user && (
+            <div className="mobile-menu-auth">
+              <button className="mobile-menu-logout" onClick={() => { handleLogout(); closeMobileMenu(); }}>
+                Logout
+              </button>
+            </div>
+          )}
         </nav>
         
         <div className="header-icons">

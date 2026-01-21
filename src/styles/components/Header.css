@@ -284,11 +284,11 @@
     left: -280px;
     width: 280px;
     height: 100vh;
-    background-color: var(--color-white);
+    background-color: var(--color-primary);
     flex-direction: column;
     box-shadow: 2px 0 12px rgba(0, 0, 0, 0.15);
     z-index: 1000;
-    padding: 4rem 0 1rem;
+    padding: 1rem 0;
     margin-top: 0;
     transition: left 0.3s ease-in-out;
     overflow-y: auto;
@@ -301,18 +301,92 @@
   .nav-link {
     padding: 1.25rem 1.5rem;
     width: 100%;
-    border-bottom: 1px solid var(--color-gray);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     font-size: 1rem;
-    color: var(--color-primary);
+    color: var(--color-white);
     transition: background-color 0.2s ease;
   }
   
   .nav-link:hover {
-    background-color: var(--color-gray);
+    background-color: rgba(255, 255, 255, 0.1);
   }
   
   .nav-link:last-child {
     border-bottom: none;
+  }
+  
+  .mobile-menu-profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--color-white);
+    text-decoration: none;
+  }
+  
+  .mobile-profile-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+  }
+  
+  .mobile-profile-email,
+  .mobile-profile-text {
+    font-size: 0.95rem;
+    font-weight: 500;
+    flex: 1;
+  }
+  
+  .mobile-profile-email {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .mobile-menu-auth {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: auto;
+  }
+  
+  .mobile-menu-auth-link {
+    padding: 0.75rem 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--color-white);
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+  }
+  
+  .mobile-menu-auth-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .mobile-menu-logout {
+    padding: 0.75rem 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--color-white);
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  .mobile-menu-logout:hover {
+    background-color: rgba(255, 255, 255, 0.2);
   }
   
   .header-icons {
